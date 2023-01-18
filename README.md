@@ -1,2 +1,2 @@
-# FantasyGame
-Czempioni czaru i ostrza
+# Czempioni czaru i ostrza
+
