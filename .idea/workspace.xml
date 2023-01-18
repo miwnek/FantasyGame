@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b09b87d7-c268-473f-9787-7829449b14de" name="Changes" comment="prototyped unit templates" />
+    <list default="true" id="b09b87d7-c268-473f-9787-7829449b14de" name="Changes" comment="#">
+      <change beforePath="$PROJECT_DIR$/src/test/java/d.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +26,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -61,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674055193989</updated>
       <workItem from="1674055195027" duration="4201000" />
-      <workItem from="1674059408605" duration="8189000" />
+      <workItem from="1674059408605" duration="8506000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1674055257389</created>
@@ -84,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674067397260</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#">
+      <created>1674067837776</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674067837776</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,7 +116,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="prototyped unit templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="prototyped unit templates" />
+    <MESSAGE value="#" />
+    <option name="LAST_COMMIT_MESSAGE" value="#" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
