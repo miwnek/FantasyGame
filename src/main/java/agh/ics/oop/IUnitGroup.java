@@ -10,4 +10,7 @@ public interface IUnitGroup {
     public boolean isAt(HexTile pos);
     public AbstractUnit getUnitTemplate();
     public int getMaxNumber();
+    public void setTile(HexTile newTile);
+    public void setLowestHealth(int num);
+    public void setNumber(int num);
 }

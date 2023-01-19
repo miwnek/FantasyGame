@@ -1,10 +1,7 @@
 package agh.ics.oop.units;
 
 import agh.ics.oop.AbstractUnit;
-import agh.ics.oop.AbstractUnitGroup;
-
-import agh.ics.oop.EStats;
-import agh.ics.oop.EUnits;
+import agh.ics.oop.UnitGroup;
 
 import java.util.HashMap;
 
@@ -27,7 +24,7 @@ public class Necromancer extends AbstractUnit {
         stats.put(SPEED,  7);
     }
 
-    public int specialAbility(int num, AbstractUnitGroup group, int player) {
+    public int specialAbility(int num, UnitGroup group, int player) {
         AbstractUnit unit = group.getUnitTemplate();
 
         int count = group.getMaxNumber();
