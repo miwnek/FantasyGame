@@ -2,7 +2,7 @@ package agh.ics.oop;
 
 import java.util.ArrayList;
 
-public class HexTile {
+public class HexTile{
     // From top left = (0,0) to bottom right = (n, n)
     private final int row;
     private final int col;
@@ -26,6 +26,24 @@ public class HexTile {
 
     public void setNeighbours(ArrayList<HexTile> neigh) {
         neighbours = neigh;
+    }
+    public ArrayList<HexTile> getNeighbours() {return neighbours;}
+
+//    @Override
+//    public int compareTo(HexTile o) {
+//        if(this.getPos().equals(o.getPos())) return 0;
+//        return this.getPos().hashCode() - o.getPos().hashCode();
+//    }
+
+
+    @Override
+    public boolean equals(Object other){
+        if (this == other)
+            return true;
+        if (!(other instanceof HexTile))
+            return false;
+        HexTile that = (HexTile) other;
+        return that.getPos().equals(this.getPos());
     }
 
 

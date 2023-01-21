@@ -8,6 +8,15 @@ public class UnitGroup implements IUnitGroup{
     protected HexTile tile;
     protected AbstractUnit template;
 
+    public UnitGroup(int player, int startNum,  AbstractUnit template) {
+        this.player = player;
+        this.maxNumber = startNum;
+        this.number = startNum;
+        this.template = template;
+        //this.tile = tile;
+        this. lowestHealth = template.getStats().get(EStats.Stats.HEALTH);
+    }
+
     @Override
     public int getPlayer() {
         return player;

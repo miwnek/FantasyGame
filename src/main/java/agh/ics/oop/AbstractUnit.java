@@ -31,6 +31,7 @@ public class AbstractUnit implements IUnit {
         return attack;
     }
 
+    //TODO: add sample images and their actual paths
     @Override
     public String getPicturePath() {
         switch(unit) {

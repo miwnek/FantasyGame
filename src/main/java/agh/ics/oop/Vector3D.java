@@ -27,8 +27,12 @@ public class Vector3D {
         return new Vector3D(x-other.x, y-other.y, z- other.z);
     }
 
+    public int distance (Vector3D other) {
+        return Math.max(Math.abs(x-other.x), Math.max(Math.abs(y-other.y), Math.abs(z- other.z)));
+    }
+
     public boolean doesNeighbour(Vector3D other) {
-        return !this.equals(other) && Math.abs(this.x-other.x) <= 1 && Math.abs(this.y-other.y) <= 1 && Math.abs(this.z - other.z) <= 1;
+        return (!this.equals(other)) && Math.abs(this.x-other.x) <= 1 && Math.abs(this.y-other.y) <= 1 && Math.abs(this.z - other.z) <= 1;
     }
 
     @Override
