@@ -11,7 +11,8 @@ import java.util.*;
 public class HexGrid {
     private static final int rowCount    = 13;
     private static final int tilesPerRow = 18;
-    private static Map<Vector3D, HexTile> tileMap = new HashMap<>();
+    private final static Map<Vector3D, HexTile> tileMap = new HashMap<>();
+    private final static Map<Vector3D, UnitGroup> groupMap = new HashMap<>();
     private static List<UnitGroup> activeGroups;// = new ArrayList<>();
     private static List<UnitGroup> deadGroups = new ArrayList<>();
     private static List<Vector3D> occupied;
@@ -29,7 +30,6 @@ public class HexGrid {
         for(int x = -1; x > (-(rowCount+1)/2); x--) {
             for(int y = (-x)*2; y < rowCount ; y++) {
                 tileMap.put(new Vector3D(x, y, -x - y), new HexTile(x, y, -x - y));
-                if (x==-3 && y == 7) System.out.println("lmao");
             }
         }
 
@@ -53,11 +53,22 @@ public class HexGrid {
     public HexTile getTile (Vector3D pos) {
         return tileMap.get(pos);
     }
+    public boolean isOccupied(Vector3D pos) {
+        return occupied.contains(pos);
+    }
+
+    public void fillingFinished() {
+        for (UnitGroup g : activeGroups) {
+            groupMap.put(g.getTile().getPos(), g);
+        }
+    }
 
     public void move(UnitGroup group, Vector3D dest) {
         HexTile destTile = tileMap.get(dest);
         occupied.remove(group.getTile().getPos());
         occupied.add(dest);
+        groupMap.remove(group.getTile().getPos());
+        groupMap.put(dest, group);
         group.setTile(destTile);
     }
 
@@ -69,9 +80,12 @@ public class HexGrid {
         ArrayList<HexTile> result = new ArrayList<>();
         ArrayList<HexTile> visited = new ArrayList<>();
         Queue<HexTile> toVisit = new LinkedList<>();
-        toVisit.add(location);
+        Map<HexTile, Integer> depth = new HashMap<>();
 
+        toVisit.add(location);
         visited.add(location);
+        depth.put(location, 0);
+
         while (!toVisit.isEmpty()) {
             HexTile curr = toVisit.remove();
 
@@ -80,9 +94,11 @@ public class HexGrid {
             ArrayList<HexTile> temp = curr.getNeighbours();
             for (HexTile neigh : temp) {
 
-                if(!visited.contains(neigh) && distance(location, neigh) <= speed) {
+                if(!visited.contains(neigh) && distance(location, neigh) <= speed
+                        && depth.get(curr) < speed && !isOccupied(neigh.getPos())) {
                     toVisit.add(neigh);
                     visited.add(neigh);
+                    depth.put(neigh, depth.get(curr) + 1);
                 }
             }
         }
@@ -92,10 +108,11 @@ public class HexGrid {
         return result;
     }
 
-    public void attack(UnitGroup source, UnitGroup target) {
+    public boolean attack(UnitGroup source, UnitGroup target) {
         int damage = source.getUnitTemplate().getStats().get(EStats.Stats.POWER) * source.getNumber();
         if (damage < target.getLowestHealth()) {
             target.setLowestHealth(target.getLowestHealth() - damage);
+            return false;
         }
         else {
             damage -= target.getLowestHealth();
@@ -108,14 +125,28 @@ public class HexGrid {
                 activeGroups.remove(target);
                 deadGroups.add(target);
                 occupied.remove(target.getTile().getPos());
+                groupMap.remove(target.getTile().getPos());
+                return true;
             }
             else {
                 num += damage / health;
                 target.setNumber(target.getNumber() - num);
                 target.setLowestHealth(health - (damage % health));
+                return false;
             }
 
         }
+    }
+
+    public ArrayList<UnitGroup> meleeTargets(UnitGroup group) {
+        ArrayList<UnitGroup> result = new ArrayList<>();
+
+        for (HexTile tile : group.getTile().getNeighbours()) {
+            if(groupMap.containsKey(tile.getPos())) {
+                result.add(groupMap.get(tile.getPos()));
+            }
+        }
+        return result;
     }
 
 

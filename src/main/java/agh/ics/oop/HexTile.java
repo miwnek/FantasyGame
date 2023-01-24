@@ -46,5 +46,9 @@ public class HexTile{
         return that.getPos().equals(this.getPos());
     }
 
+    @Override
+    public int hashCode() {
+        return this.getPos().hashCode();
+    }
 
 }

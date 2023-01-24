@@ -1,6 +1,7 @@
 package agh.ics.oop;
 
 public class EUnits {
+
     public enum UnitType {
         ZOMBIE,
         SKELETON,
@@ -8,6 +9,7 @@ public class EUnits {
         NECROMANCER,
         DEATHKNIGHT
     }
+
 
     public enum AttackType {
         MELEE,

@@ -4,16 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b09b87d7-c268-473f-9787-7829449b14de" name="Changes" comment="gui + map init">
+    <list default="true" id="b09b87d7-c268-473f-9787-7829449b14de" name="Changes" comment="prototyped turn and move system">
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/SecondMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/undeadu1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/undeadu2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/undeadu3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/undeadu4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/undeadu5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/EUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/EUnits.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/HexTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/HexTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Map/HexGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Map/HexGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/UnitGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/UnitGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Vector3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Vector3D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Skeleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Skeleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +61,21 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KVMF8YfkmS5Og1SdJlhGwueiVY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mikołaj Wnęk/IdeaProjects/FantasyGame/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -73,6 +88,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mikołaj Wnęk\IdeaProjects\FantasyGame\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mikołaj Wnęk\IdeaProjects\FantasyGame\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="FantasyGame [agh.ics.oop.Main]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
@@ -109,7 +132,9 @@
       <workItem from="1674143206613" duration="16046000" />
       <workItem from="1674162842086" duration="1230000" />
       <workItem from="1674248168132" duration="4090000" />
-      <workItem from="1674310706567" duration="14433000" />
+      <workItem from="1674310706567" duration="25969000" />
+      <workItem from="1674484301269" duration="11511000" />
+      <workItem from="1674565840756" duration="8057000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1674055257389</created>
@@ -181,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674162041696</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="prototyped turn and move system">
+      <created>1674338042560</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674338042560</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,11 +231,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="prototyped unit templates" />
     <MESSAGE value="#" />
     <MESSAGE value="gui + map init" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui + map init" />
+    <MESSAGE value="prototyped turn and move system" />
+    <option name="LAST_COMMIT_MESSAGE" value="prototyped turn and move system" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

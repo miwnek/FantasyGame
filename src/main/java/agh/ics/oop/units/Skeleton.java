@@ -22,7 +22,7 @@ public class Skeleton extends AbstractUnit {
          stats.put(COST,   5);
          stats.put(POWER,  3);
          stats.put(HEALTH, 8);
-         stats.put(SPEED,  6);
+         stats.put(SPEED,  5);
      }
 
      public static int getHealth() {
