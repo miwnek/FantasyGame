@@ -23,7 +23,7 @@ public class SecondMenu {
         SecondMenuController controller  = fxmlLoader.getController();
         controller.setValues(playerOneArmy,playerTwoArmy);
         primaryStage.setTitle("SecondMenu");
-        primaryStage.setScene(new Scene(sndRoot,600,800));
+        primaryStage.setScene(new Scene(sndRoot,600,900));
 
     }
 
