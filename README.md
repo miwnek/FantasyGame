@@ -7,6 +7,7 @@ Project requirements [here](https://github.com/apohllo/obiektowe-lab/blob/master
 This is an homage to the Heroes of Might and Magic 3 battle system. For the most part battle works in a similar way. Players pick their factions (for now Undead or Orcs stronghold) and then get to pick units for their final army from said factions. When a player hovers over a unit sprite, their stats and abilities (if they have any) show.
 Unit costs are displayed under their sprites. When both players lock in their selections (not empty armies with a price under 200 gold) the battle begins. On each turn a unit can:
 - attack,
+- move,
 - move then attack,
 - use its special ability (if it has any),
 - do nothing.
