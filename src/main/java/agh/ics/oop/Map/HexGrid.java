@@ -6,6 +6,7 @@ import agh.ics.oop.HexTile;
 import agh.ics.oop.Vector3D;
 import agh.ics.oop.units.Necromancer;
 import agh.ics.oop.units.Skeleton;
+import agh.ics.oop.units.Zombie;
 
 import java.sql.Array;
 import java.util.*;
@@ -18,10 +19,12 @@ public class HexGrid {
     private static List<UnitGroup> activeGroups;// = new ArrayList<>();
     private static List<UnitGroup> deadGroups = new ArrayList<>();
     private static List<Vector3D> occupied;
+    private static List<Vector3D> obstacles;
 
     public HexGrid(List<UnitGroup> start, List<Vector3D> obs) {
         activeGroups = start;
         occupied = new ArrayList<>(obs);
+        obstacles = new ArrayList<>(obs);
 
         // Initialize tiles and put them in the HashMap with their corresponding vectors as keys
         for(int x = 0; x < tilesPerRow; x++) {
@@ -58,6 +61,8 @@ public class HexGrid {
     public boolean isOccupied(Vector3D pos) {
         return occupied.contains(pos);
     }
+    public boolean hasGroup(Vector3D pos) {return groupMap.containsKey(pos);}
+    public UnitGroup getGroup(Vector3D pos) {return groupMap.get(pos);}
 
     public void fillingFinished() {
         for (UnitGroup g : activeGroups) {
@@ -151,12 +156,30 @@ public class HexGrid {
         return result;
     }
 
+    public boolean getsCounterattacked(UnitGroup group) {
+        for (HexTile neigh : group.getTile().getNeighbours()) {
+            if(isOccupied(neigh.getPos()) && !obstacles.contains(neigh.getPos()) &&
+            groupMap.get(neigh.getPos()).getPlayer() != group.getPlayer()) return true;
+        }
+        return false;
+    }
+
+    public UnitGroup getCaSource(UnitGroup group) {
+        for (HexTile neigh : group.getTile().getNeighbours()) {
+            if(isOccupied(neigh.getPos()) && !obstacles.contains(neigh.getPos())&&
+                    groupMap.get(neigh.getPos()).getPlayer() != group.getPlayer()) return groupMap.get(neigh.getPos());
+        }
+        System.out.println("Bad call of getCaSource");
+        return new UnitGroup(0, 0, new Zombie());
+    }
+
 public UnitGroup necromancerSpecial(UnitGroup source, UnitGroup target, int player) {
         int resurrCount = ((Necromancer) source.getUnitTemplate()).specialAbility(source.getNumber(), target);
         UnitGroup resurrGroup = new UnitGroup(player, resurrCount, new Skeleton());
         resurrGroup.setTile(target.getTile());
         //activeGroups.add(resurrGroup);
         occupied.add(resurrGroup.getTile().getPos());
+        groupMap.put(resurrGroup.getTile().getPos(), resurrGroup);
         return resurrGroup;
     }
 

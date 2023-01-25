@@ -24,10 +24,9 @@ public class MenuController implements Initializable{
     private ChoiceBox<String> armyOne;
     @FXML
     private ChoiceBox<String> armyTwo;
-    private final String[] armies = {"Undead", "Orcs"};
+    private final String[] armies = {"Undead", "Orc stronghold"};
 
     public void confirm(ActionEvent e) throws Exception {
-        System.out.println("Confirmed");
         new SecondMenu(primaryStage, playerOneArmy, playerTwoArmy);
         //app.start(primaryStage);
     }
@@ -43,16 +42,13 @@ public class MenuController implements Initializable{
         armyOne.setValue("Undead");
         armyTwo.getItems().addAll(armies);
         armyTwo.setOnAction(this::getArmyTwo);
-        armyTwo.setValue("Orcs");
+        armyTwo.setValue("Orc stronghold");
     }
 
     public void getArmyOne(ActionEvent e) {
         playerOneArmy = armyOne.getValue();
-        System.out.println(playerOneArmy);
     }
     public void getArmyTwo(ActionEvent e) {
         playerTwoArmy = armyTwo.getValue();
-        System.out.println(playerTwoArmy);
-
     }
 }

@@ -26,7 +26,7 @@ public class Tile extends Polygon {
 
         // set up the visuals and a click listener for the tile
         this.setFill(Color.TRANSPARENT);
-        setStrokeWidth(1);
+        setStrokeWidth(2);
         setStroke(Color.BLACK);
 
         //setOnMouseClicked(e -> System.out.println(this.vector.toString()));

@@ -11,24 +11,24 @@
    <children>
       <ChoiceBox fx:id="armyOne" layoutX="77.0" layoutY="93.0" prefWidth="150.0" />
       <ChoiceBox fx:id="armyTwo" layoutX="374.0" layoutY="93.0" prefWidth="150.0" />
-      <Text layoutX="418.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" wrappingWidth="61.13671684265137">
+      <Text layoutX="415.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" wrappingWidth="68.0">
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Text>
-      <Text layoutX="121.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" wrappingWidth="61.13671684265125">
+      <Text layoutX="118.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" wrappingWidth="68.0">
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Text>
       <Text layoutX="158.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Army selection">
          <font>
-            <Font size="40.0" />
+            <Font name="High Tower Text" size="40.0" />
          </font>
       </Text>
       <Button layoutX="233.0" layoutY="166.0" mnemonicParsing="false" onAction="#confirm" prefHeight="53.0" prefWidth="110.0" text="Confirm">
          <font>
-            <Font size="16.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Button>
       <AmbientLight color="CHARTREUSE" layoutX="555.0" layoutY="26.0" lightOn="true" />

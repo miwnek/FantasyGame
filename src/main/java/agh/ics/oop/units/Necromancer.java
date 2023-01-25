@@ -30,9 +30,11 @@ public class Necromancer extends AbstractUnit {
         int count = group.getMaxNumber();
         int maxHealth = unit.getStats().get(HEALTH);
         int skeletonHealth = Skeleton.getHealth();
-        int healthToGive = num *  specialPower * count * maxHealth * 2 / 3;
-
-        return Math.max(1, (healthToGive % skeletonHealth));
+        int healthToGive = (num *  specialPower * count * maxHealth ) / 50;
+        System.out.println(String.valueOf(num) + ", " + String.valueOf(specialPower) + ", " + String.valueOf(count) + ", " + String.valueOf(maxHealth) + ", ");
+        System.out.println(String.valueOf(num *  specialPower * count * maxHealth * 2 / 3));
+        System.out.println(String.valueOf(healthToGive / skeletonHealth));
+        return Math.max(1, (healthToGive / skeletonHealth));
     }
 
 }

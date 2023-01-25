@@ -12,7 +12,7 @@ public class Menu extends Application {
         Parent root = FXMLLoader.load(this.getClass().getResource("/Menu.fxml"));
         MenuController.setStage(primaryStage);
         primaryStage.setTitle("Menu");
-        primaryStage.setScene(new Scene(root,600,400));
+        primaryStage.setScene(new Scene(root,600,250));
         primaryStage.setResizable(false);
         primaryStage.show();
     }
