@@ -7,6 +7,8 @@ import agh.ics.oop.EUnits.*;
 
 import agh.ics.oop.UnitGroup;
 import agh.ics.oop.units.*;
+import javafx.animation.Animation;
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,6 +24,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -161,10 +164,15 @@ public class SecondMenuController implements Initializable {
         for(int i = 0; i < 5; i++) {
             imageTable[i].setImage(new Image(new FileInputStream(getPicturePath(armyTable[i]))));
             int finalI = i;
-            imageTable[i].setOnMouseEntered(e -> {
+            Animation delay = new PauseTransition(Duration.seconds(0.3));
+            delay.setOnFinished(ev -> {
                 popupMake(imageTable[finalI], finalI);
             });
+            imageTable[i].setOnMouseEntered(e -> {
+                delay.playFromStart();
+            });
             imageTable[i].setOnMouseExited(e -> {
+                delay.stop();
                 popupDelete();
             });
         }

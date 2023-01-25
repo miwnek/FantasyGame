@@ -4,39 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b09b87d7-c268-473f-9787-7829449b14de" name="Changes" comment="semi-finished menu + improved battle system">
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/AxeMaster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Goblin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Grunt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Ogre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Shaman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bgBar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/orcsu1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/orcsu2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/orcsu3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/orcsu4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/orcsu5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/outline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rockImg.png" afterDir="false" />
+    <list default="true" id="b09b87d7-c268-473f-9787-7829449b14de" name="Changes" comment="finished first version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/EUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/EUnits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Map/HexGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Map/HexGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Necromancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SecondMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SecondMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/undeadu1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/undeadu1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/undeadu2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/undeadu2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/undeadu3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/undeadu3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/undeadu4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/undeadu4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/undeadu5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/undeadu5.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +119,8 @@
       <workItem from="1674310706567" duration="25969000" />
       <workItem from="1674484301269" duration="11511000" />
       <workItem from="1674565840756" duration="52856000" />
-      <workItem from="1674671307697" duration="8972000" />
+      <workItem from="1674671307697" duration="9377000" />
+      <workItem from="1674682813325" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1674055257389</created>
@@ -249,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674609457012</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="finished first version">
+      <created>1674680936593</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674680936593</updated>
+    </task>
+    <task id="LOCAL-00016" summary="finished first version">
+      <created>1674681009336</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674681009336</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +261,8 @@
     <MESSAGE value="prototyped menu" />
     <MESSAGE value="prototyped menu v2" />
     <MESSAGE value="semi-finished menu + improved battle system" />
-    <option name="LAST_COMMIT_MESSAGE" value="semi-finished menu + improved battle system" />
+    <MESSAGE value="finished first version" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished first version" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

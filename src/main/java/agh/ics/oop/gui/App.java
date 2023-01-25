@@ -3,6 +3,8 @@ package agh.ics.oop.gui;
 import agh.ics.oop.*;
 import agh.ics.oop.Map.HexGrid;
 import agh.ics.oop.units.*;
+import javafx.animation.Animation;
+import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -24,6 +26,7 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
 import javafx.fxml.FXMLLoader;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -436,6 +439,11 @@ public class App{
         }
 
         for (UnitGroup group : activeGroups) {
+            Animation delay = new PauseTransition(Duration.seconds(0.3));
+            delay.setOnFinished(ev -> {
+                popupMake(group);
+            });
+
             Vector3D pos = group.getTile().getPos();
 
             Label label = vecToLabel.get(pos);
@@ -446,9 +454,10 @@ public class App{
             img.setVisible(true);
             img.setImage(new Image(new FileInputStream(group.getUnitTemplate().getPicturePath())));
             img.setOnMouseEntered(e -> {
-                popupMake(group);
+                delay.playFromStart();
             });
             img.setOnMouseExited(e -> {
+                delay.stop();
                 popupDelete();
             });
         }
