@@ -14,6 +14,6 @@ Unit costs are displayed under their sprites. When both players lock in their se
 
 Unit priority is determined on ech unit's speed stat. For ranged units line of sight is determined whether there is an obstacle on a straight path from the middle of the attacking unit's hex tile to the middle of the target unit's hex tile. If a unit tries to move when there is an enemy unit on a neighboring tile, it gets counterattacked by the enemy unit. For now there are two special abilities in the game:
 - necromancer can animate fallen enemy units as skeletons (if the tile where the unit died is not occupied),
-- shaman can cast a fireball spell dealing damge to all enemy units on a chosen tile and its neighbors.  
+- shaman can cast a fireball spell dealing damage to all enemy units on a chosen tile and its neighbors.  
 
 Sprites were downloaded from open source websites.
