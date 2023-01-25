@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b09b87d7-c268-473f-9787-7829449b14de" name="Changes" comment="prototyped menu">
+    <list default="true" id="b09b87d7-c268-473f-9787-7829449b14de" name="Changes" comment="prototyped menu v2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/UnitGroupComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Map/HexGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Map/HexGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/UnitGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/UnitGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/gui/SecondMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SecondMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SecondMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Necromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/units/Necromancer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +124,7 @@
       <workItem from="1674248168132" duration="4090000" />
       <workItem from="1674310706567" duration="25969000" />
       <workItem from="1674484301269" duration="11511000" />
-      <workItem from="1674565840756" duration="15687000" />
+      <workItem from="1674565840756" duration="31912000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1674055257389</created>
@@ -204,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674574388822</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="prototyped menu v2">
+      <created>1674582936397</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674582936397</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +242,8 @@
     <MESSAGE value="gui + map init" />
     <MESSAGE value="prototyped turn and move system" />
     <MESSAGE value="prototyped menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="prototyped menu" />
+    <MESSAGE value="prototyped menu v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="prototyped menu v2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

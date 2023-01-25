@@ -14,7 +14,7 @@ public class UnitGroup implements IUnitGroup{
         this.number = startNum;
         this.template = template;
         //this.tile = tile;
-        this. lowestHealth = template.getStats().get(EStats.Stats.HEALTH);
+        this.lowestHealth = template.getStats().get(EStats.Stats.HEALTH);
     }
 
     @Override
@@ -51,6 +51,10 @@ public class UnitGroup implements IUnitGroup{
 
     @Override
     public void setNumber(int num) {number = num;}
+    @Override
+    public String toString() {
+        return template.toString() + " " + String.valueOf(number);
+    }
 
 //    @Override
 //    public int hashCode() {

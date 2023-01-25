@@ -17,7 +17,6 @@ import java.util.ResourceBundle;
 
 public class MenuController implements Initializable{
     private static Stage primaryStage;
-    App app = new App();
     private String playerOneArmy = "Undead";
     private String playerTwoArmy = "Undead";
 

@@ -24,7 +24,7 @@ public class Necromancer extends AbstractUnit {
         stats.put(SPEED,  7);
     }
 
-    public int specialAbility(int num, UnitGroup group, int player) {
+    public int specialAbility(int num, UnitGroup group) {
         AbstractUnit unit = group.getUnitTemplate();
 
         int count = group.getMaxNumber();
@@ -32,7 +32,7 @@ public class Necromancer extends AbstractUnit {
         int skeletonHealth = Skeleton.getHealth();
         int healthToGive = num *  specialPower * count * maxHealth * 2 / 3;
 
-        return (healthToGive % skeletonHealth);
+        return Math.max(1, (healthToGive % skeletonHealth));
     }
 
 }

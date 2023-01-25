@@ -26,6 +26,8 @@ import java.util.ResourceBundle;
 import static agh.ics.oop.EStats.Stats.*;
 
 public class SecondMenuController implements Initializable {
+    App app = new App();
+    private Stage primaryStage;
     private  static String playerOneArmy;
     private  static String playerTwoArmy;
     private static final String[] armies = {"Undead", "Orcs"};
@@ -223,7 +225,10 @@ public class SecondMenuController implements Initializable {
                 }
 
                 //TODO: launch app
-                if (p2ready) { System.out.println("Game starts here"); }
+                if (p2ready) {
+                    System.out.println("Game starts here");
+                    app.start(primaryStage, p1finalArmy, p2finalArmy);
+                }
                 else { p1ready = true; p1Status.setText("Player 1 is ready");}
             }
         }
@@ -263,10 +268,15 @@ public class SecondMenuController implements Initializable {
                 }
 
                 //TODO: launch app
-                if (p1ready) { System.out.println("Game starts here"); }
+                if (p1ready) {
+                    System.out.println("Game starts here");
+                    app.start(primaryStage, p1finalArmy, p2finalArmy);
+                }
                 else { p2ready = true; p2Status.setText("Player 2 is ready");}
             }
         }
     }
+
+    public void setStage(Stage ps) { primaryStage = ps;}
 
 }

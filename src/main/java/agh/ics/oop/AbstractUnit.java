@@ -43,5 +43,16 @@ public class AbstractUnit implements IUnit {
         }
         return null;
     }
+    @Override
+    public String toString() {
+        switch(unit) {
+            case SKELETON -> {return "Skeleton";}
+            case ZOMBIE -> {return "Zombie";}
+            case VAMPIRE -> {return "Vampire";}
+            case NECROMANCER -> {return "Necromancer";}
+            case DEATHKNIGHT -> {return "Death knight";}
+            default -> {return "No such unit";}
+        }
+    }
 
 }

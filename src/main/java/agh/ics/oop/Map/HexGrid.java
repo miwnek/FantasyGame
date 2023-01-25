@@ -4,6 +4,8 @@ import agh.ics.oop.EStats;
 import agh.ics.oop.UnitGroup;
 import agh.ics.oop.HexTile;
 import agh.ics.oop.Vector3D;
+import agh.ics.oop.units.Necromancer;
+import agh.ics.oop.units.Skeleton;
 
 import java.sql.Array;
 import java.util.*;
@@ -19,7 +21,7 @@ public class HexGrid {
 
     public HexGrid(List<UnitGroup> start, List<Vector3D> obs) {
         activeGroups = start;
-        occupied = obs;
+        occupied = new ArrayList<>(obs);
 
         // Initialize tiles and put them in the HashMap with their corresponding vectors as keys
         for(int x = 0; x < tilesPerRow; x++) {
@@ -60,6 +62,7 @@ public class HexGrid {
     public void fillingFinished() {
         for (UnitGroup g : activeGroups) {
             groupMap.put(g.getTile().getPos(), g);
+            occupied.add(g.getTile().getPos());
         }
     }
 
@@ -123,7 +126,6 @@ public class HexGrid {
                 target.setNumber(0);
                 target.setLowestHealth(0);
                 activeGroups.remove(target);
-                deadGroups.add(target);
                 occupied.remove(target.getTile().getPos());
                 groupMap.remove(target.getTile().getPos());
                 return true;
@@ -149,19 +151,16 @@ public class HexGrid {
         return result;
     }
 
+public UnitGroup necromancerSpecial(UnitGroup source, UnitGroup target, int player) {
+        int resurrCount = ((Necromancer) source.getUnitTemplate()).specialAbility(source.getNumber(), target);
+        UnitGroup resurrGroup = new UnitGroup(player, resurrCount, new Skeleton());
+        resurrGroup.setTile(target.getTile());
+        //activeGroups.add(resurrGroup);
+        occupied.add(resurrGroup.getTile().getPos());
+        return resurrGroup;
+    }
 
 }
 
-//    int rowCount = 13; // how many rows of tiles should be created
-//    int tilesPerRow = 18; // the amount of tiles that are contained in each row
-//    int xStartOffset = 40; // offsets the entire field to the right
-//    int yStartOffset = 120; // offsets the entire field downwards
 
-//    private final static int WINDOW_WIDTH = 1200;
-//    private final static int WINDOW_HEIGHT = 800;
-//
-//    private final static double r = 30; // the inner radius from hexagon center to outer corner
-//    private final static double n = Math.sqrt(r * r * 0.75); // the inner radius from hexagon center to middle of the axis
-//    private final static double TILE_HEIGHT = 2 * r;
-//    private final static double TILE_WIDTH = 2 * n;
 
